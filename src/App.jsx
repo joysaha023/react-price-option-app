@@ -1,13 +1,15 @@
 
 import './App.css'
+import Navber from './components/Navbar/Navber'
 
 function App() {
  
 
   return (
     <>
-     
-      <h1>Vite + React</h1>
+      <div>
+        <Navber></Navber>
+      </div>
      
     </>
   )
