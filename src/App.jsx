@@ -1,6 +1,7 @@
 
 import './App.css'
 import Navber from './components/Navbar/Navber'
+import PriceOption from './components/PriceOption/PriceOption'
 
 function App() {
  
@@ -9,6 +10,7 @@ function App() {
     <>
       <div>
         <Navber></Navber>
+        <PriceOption></PriceOption>
       </div>
      
     </>
