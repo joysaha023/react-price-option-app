@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Link from '../Link/Link';
+import { FaBars } from "react-icons/fa6";
+import { RxCross1 } from "react-icons/rx";
 
 const routes = [
     { id: 1, name: 'Home', path: '/' },
@@ -10,12 +13,21 @@ const routes = [
   
 
 const Navber = () => {
+    const [open, setOpen] = useState(false)
     return (
         <div>
             <nav>
-                <ul className='flex gap'>
+            
+                <div className='md:hidden' onClick={() => setOpen(!open)}>
                     {
-                        routes.map(route => <li className='mr-10' key={route.id}><a href={`route.path`}>{route.name}</a></li>)
+                        open === true ? <RxCross1 className='text-2xl'/> : <FaBars className='text-2xl' />
+                    }
+                    
+                    
+                </div>
+                <ul className='md:flex absolute bg-slate-200 px-6 shadow-lg'>
+                    {
+                        routes.map(route => <Link key={route.id} route={route}></Link>)
                     }
                 </ul>
             </nav>
