@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
 const LineGraph = () => {
 
@@ -43,7 +43,8 @@ const LineGraph = () => {
 
 
     return (
-        <div className='mt-20'>
+        <div className='mt-20 '>
+            {/* <ResponsiveContainer width="100%" height="100%"> */}
             <LineChart width={500} height={400} data={studentsMarks}>
             <XAxis dataKey={'name'}></XAxis>    
             <YAxis></YAxis>
@@ -51,6 +52,7 @@ const LineGraph = () => {
                 <Line dataKey="english" stroke='blue'></Line>
                 <Line dataKey="physics" stroke='green'></Line>
             </LineChart>
+            {/* </ResponsiveContainer> */}
         </div>
     );
 };
